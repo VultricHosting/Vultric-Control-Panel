@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['submit'])){
     $file = $_FILES['file'];
     
@@ -30,5 +31,4 @@ if(isset($_POST['submit'])){
         echo "you cant upload files of this type";
     }
 }
-
 ?>
