@@ -1,0 +1,11 @@
+We're glad you want to help us out and make this panel the best that it can be! We have a few simple things to follow when making changes to files and adding new features.
+
+The CHANGELOG
+You should not make any changes to the CHANGELOG.md file during your code updates. This is updated by the maintainers at the time of deployment to include the relevant changes that were made.
+
+Responsible Disclosure
+This is a fairly in-depth project and makes use of a lot of parts. We strive to keep everything as secure as possible and welcome you to take a look at the code provided in this project yourself. We do ask that you be considerate of others who are using the software and not publicly disclose security issues without contacting us first by email.
+
+We'll make a deal with you: if you contact us by email and we fail to respond to you within a week you are welcome to publicly disclose whatever issue you have found. We understand how frustrating it is when you find something big and no one will respond to you. This holds us to a standard of providing prompt attention to any issues that arise and keeping this community safe.
+
+If you've found what you believe is a security issue please email itizjr@gmail.com.
