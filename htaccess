@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://webpanel.vultrichosting.com/$1 [R,L]
+
+<FilesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=31449600, public"
+</FilesMatch>
+RewriteCond %{HTTP_HOST} ^webpanel\.vultrichosting\.com$
+RewriteRule ^/?$ "https\:\/\/webpanel\.vultrichosting\.com\/login\.php" [R=301,L]
