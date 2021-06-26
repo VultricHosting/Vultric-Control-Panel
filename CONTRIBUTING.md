@@ -8,7 +8,7 @@ This is a fairly in-depth project and makes use of a lot of parts. We strive to 
 
 We'll make a deal with you: if you contact us by email and we fail to respond to you within a week you are welcome to publicly disclose whatever issue you have found. We understand how frustrating it is when you find something big and no one will respond to you. This holds us to a standard of providing prompt attention to any issues that arise and keeping this community safe.
 
-If you've found what you believe is a security issue please email itizjr@gmail.com.
+If you've found what you believe is a security issue please email jr@web-svr.net.
 
 Contact Us
 You can find us in a couple places online. First and foremost, we're active right here on Github. If you encounter a bug or other problems, open an issue on here for us to take a look at it. We also accept feature requests here as well.
