@@ -11,7 +11,15 @@ Ubuntu:
 | 21.04   | :white_check_mark: |
 | 20.10   | :white_check_mark: |
 | 18.04.5 | :white_check_mark: |
-| < 18.04 | :x:               |
+| < 18.04 | :x:                |
+
+Cent OS:
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 8       | :white_check_mark: |
+| 7       | :white_check_mark: |
+| < 7     | :x:                |
 
 ## Reporting a Vulnerability
 
