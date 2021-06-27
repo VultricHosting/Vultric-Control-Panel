@@ -1,54 +1,54 @@
 <?php
-   session_start();
-   
-   if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-   header("location: ../login.php");
-   exit;
-   }
-   
-   require_once "../requires/config.php";
-   $strSQL = "SELECT plan, ftpaccounts, subdomains, addondomains, parkeddomains, mysqldbs, diskspace, diskused, diskrem, bandwith, bandused, bandrem, maindomain, ftphost, ftpuser, mysqlhost, mysqluser, svrnum, panelv  FROM users WHERE id = '".$_SESSION['id']."'";
-   $rs = mysqli_query($link, $strSQL);
-   
-   while($row = mysqli_fetch_array($rs)) {
-       $plan = $row['plan'];
-       $ftpaccounts = $row['ftpaccounts'];
-       $subdomains = $row['subdomains'];
-       $addondomains = $row['addondomains'];
-       $parkeddomains = $row['parkeddomains'];
-       $mysqldbs = $row['mysqldbs'];
-       $diskspace = $row['diskspace'];
-       $diskused = $row['diskused'];
-       $diskrem = $row['diskrem'];
-       $bandwith = $row['bandwith'];
-       $bandused = $row['bandused'];
-       $bandrem = $row['bandrem'];
-       $maindomain = $row['maindomain'];
-       $ftphost = $row['ftphost'];
-       $ftpuser = $row['ftpuser'];
-       $mysqlhost = $row['mysqlhost'];
-       $mysqluser = $row['mysqluser'];
-       $svrnum = $row['svrnum'];
-       $panelv = $row['panelv'];
-       $Package = "";
-       $remdisk = "";
-       $remband = "";
-   }
-   
-      if($plan == "Unmetered Hosting"){
-         $Package = "Unlimited";
-     }elseif ($plan == "Amethyst Hosting"){
-         $Package = "10 GB";
-         $remband = $bandwith - $bandused;
-         $remdisk = $diskspace - $diskrem; 
-   }elseif ($plan == "Golden Hosting"){
-         $Package = "15 GB";
-         $remband = $bandwith - $bandused;
-         $remdisk = $diskspace - $diskrem; 
-   }
-   
-   mysqli_close($link);
+session_start();
+
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: ../login.php");
+    exit;
+}
+
+require_once "../requires/config.php";
+$strSQL = "SELECT plan, ftpaccounts, subdomains, addondomains, parkeddomains, mysqldbs, diskspace, diskused, diskrem, bandwith, bandused, bandrem, maindomain, ftphost, ftpuser, mysqlhost, mysqluser, svrnum, panelv  FROM users WHERE id = '" . $_SESSION['id'] . "'";
+$rs     = mysqli_query($link, $strSQL);
+
+while ($row = mysqli_fetch_array($rs)) {
+    $plan          = $row['plan'];
+    $ftpaccounts   = $row['ftpaccounts'];
+    $subdomains    = $row['subdomains'];
+    $addondomains  = $row['addondomains'];
+    $parkeddomains = $row['parkeddomains'];
+    $mysqldbs      = $row['mysqldbs'];
+    $diskspace     = $row['diskspace'];
+    $diskused      = $row['diskused'];
+    $diskrem       = $row['diskrem'];
+    $bandwith      = $row['bandwith'];
+    $bandused      = $row['bandused'];
+    $bandrem       = $row['bandrem'];
+    $maindomain    = $row['maindomain'];
+    $ftphost       = $row['ftphost'];
+    $ftpuser       = $row['ftpuser'];
+    $mysqlhost     = $row['mysqlhost'];
+    $mysqluser     = $row['mysqluser'];
+    $svrnum        = $row['svrnum'];
+    $panelv        = $row['panelv'];
+    $Package       = "";
+    $remdisk       = "";
+    $remband       = "";
+}
+
+if ($plan == "Unmetered Hosting") {
+    $Package = "Unlimited";
+} elseif ($plan == "Amethyst Hosting") {
+    $Package = "10 GB";
+    $remband = $bandwith - $bandused;
+    $remdisk = $diskspace - $diskrem;
+} elseif ($plan == "Golden Hosting") {
+    $Package = "15 GB";
+    $remband = $bandwith - $bandused;
+    $remdisk = $diskspace - $diskrem;
+}
+mysqli_close($link);
 ?>
+   
    
 <!DOCTYPE html>
 <html lang="en" dir="ltr" data-style="basic">
